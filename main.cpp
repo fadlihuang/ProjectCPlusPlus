@@ -10,4 +10,5 @@ int main(int argc, char *argv[])
     return a.exec();
     int x = 1;
     //fkfkfkfkfkfk
+    // sam takoy
 }
