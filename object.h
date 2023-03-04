@@ -22,6 +22,7 @@ public:
     virtual void setName(QString name_obj) = 0;
     virtual void setDesc(QString desc) = 0;
     virtual void setType(QString type) = 0;
+
 };
 
 #endif // OBJECT_H
