@@ -17,5 +17,6 @@ Object::Object(QString name_obj, QString desc)
 Object::Object(QString name_obj)
 {
     name = name_obj;
+    description = "";
     type = "object";
 }
