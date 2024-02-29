@@ -1,0 +1,117 @@
+#include<iostream>
+using namespace std;
+//creat by fadlihuang
+int main (){
+	
+	int nis, ipa, mtk, indo, total;
+	float hasil;
+	string nama, ipak, mtkk, indok, div, ket; 
+	
+	cout <<"=== Selamat Datang Di Aplikasi Penilaian ==="<<endl;
+	cout <<"============== Ujian Nasional =============="<<endl;
+	cout << "\n=========================================="<<endl;
+	cout <<"\nKamu Akan Dinyatakan Lulus"<<endl;
+	cout <<"Jika Minimal Persentase 65%"<<endl;
+	cout << "\n=========================================="<<endl;
+	
+	cout << "\nMasukkan NIS \t\t:";
+	cin >> nis;
+	          
+	cout <<  "Masukkan Nama Siswa/i \t:";
+	cin >> nama;
+		
+	cout << "\nMasukkan Nilai"<< endl;
+	
+	cout << "Sains \t\t\t:";
+	cin >> ipa;
+	//ambang batas 65
+	cout << "Matematika \t\t:";
+	cin >> mtk;	
+	//ambang batas 65
+	cout << "Bahasa Indonesia \t:";
+	cin >> indo;
+	//ambang batas 70
+	
+	cout << "=========================================="<<endl;
+	
+	total = ipa+mtk+indo;
+	hasil = total/3.0;
+	
+	//indonesia
+	if(indo < 70){
+		indok = "\tKurang Dari KKM";
+	}else indok = "\tLebih Dari KKM";
+	
+	if(indo == 70){
+		indok = "\tSesuai KKM";
+	}
+	
+	//sains
+	if(ipa < 65){
+		ipak = "\tKurang Dari KKM";
+	}else ipak = "\tLebih Dari KKM";
+	
+	if(ipa == 65){
+		ipak = "\tSesuai KKM";
+	}	
+	
+	//matematika
+	if(mtk < 60){
+		mtkk = "\tKurang Dari KKM";
+	}else mtkk = "\tLebih Dari KKM";
+	
+	if(mtk == 60){
+		mtkk = "\tSesuai KKM";
+	}
+	
+	//keterangan lulus
+	if(hasil >= 80) {
+		div = "Cumlaude";
+	}else
+	if (hasil >=75 && hasil < 80){
+		div = "Lulus Dengan Sangat Baik";
+	}else
+	if (hasil >= 65&& hasil < 75){
+		div = "Lulus";
+	}
+	
+	//keterangan lulus 2 kkm
+	else
+	if (mtk >= 60 && ipa >= 65){
+		div = "Lulus";
+		ket = "\n==========================================\n\nNamun Kamu Tetap Dinyatakan Lulus\nWalaupun Persentase Dibawah 65%.\nJika Minimal Terdapat 2 Mata pelajaran\nSesuai Atau Melebihi KKM\n\n==========================================";
+	}else
+	if  (mtk >= 60 && indo >= 70){
+		div = "Lulus";
+		ket = "\n==========================================\n\nNamun Kamu Tetap Dinyatakan Lulus\nWalaupun Persentase Dibawah 65%.\nJika Minimal Terdapat 2 Mata pelajaran\nSesuai Atau Melebihi KKM\n\n==========================================";		
+	}else
+	if (indo >= 70 && ipa >= 65){
+		div = "Lulus";
+		ket = "\n==========================================\n\nNamun Kamu Tetap Dinyatakan Lulus\nWalaupun Persentase Dibawah 65%.\nJika Minimal Terdapat 2 Mata pelajaran\nSesuai Atau Melebihi KKM\n\n==========================================";		
+	}else div = "Tidak Lulus";
+		
+	
+	
+		
+	cout << "Nomor Induk Siswa/i \t:"<<nis<<endl;
+	cout << "Nama \t\t\t:"<<nama<<endl;
+	cout << "Nilai Sains \t\t:"<<ipa<<ipak<<endl;
+	cout << "Nilai Matematika \t:"<<mtk<<mtkk<<endl;
+	cout << "Nilai Bahasa Indonesia \t:"<<indo<<indok<<endl;
+	
+	cout << "=========================================="<<endl;
+	
+	cout << "Total Nilai \t\t:"<<total<<endl;
+	cout << "Persentase \t\t:"<<hasil<<" %"<<endl;
+	cout << "Keterangan Hasil \t:"<<div<<endl;
+	cout << ket;
+	
+	/*
+	cout << "\n==================================="<<endl;
+	cout <<"\nNamun Kamu Tetap Dinyatakan Lulus"<<endl;
+	cout <<"Walaupun Persentase Dibawah 65%."<<endl;
+	cout <<"Jika Minimal Terdapat 2 Mata pelajaran"<<endl;
+	cout <<"Sesuai Atau Melebihi KKM"<<endl;
+	cout << "\n==================================="<<endl;
+	*/
+}
